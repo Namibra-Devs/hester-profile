@@ -28,10 +28,10 @@ export default function Navbar() {
         if (i < name.length) {
           setDisplayText(name.slice(0, i + 1));
           i++;
-          timeout = setTimeout(type, 200); // slower speed
+          timeout = setTimeout(type, 200);
         } else {
           deleting = true;
-          timeout = setTimeout(type, 1200); // pause before erase
+          timeout = setTimeout(type, 1200);
         }
       } else {
         if (i > 0) {
@@ -55,7 +55,7 @@ export default function Navbar() {
           fixed top-4 left-1/2 transform -translate-x-1/2
           flex justify-between items-center w-[92%] md:w-[85%]
           px-6 py-3 rounded-2xl
-          backdrop-blur-xl bg-white/10 dark:bg-black/20
+          backdrop-blur-xl bg-white/30 dark:bg-black/20
           border border-white/20 dark:border-gray-700
           shadow-lg z-50
         "
@@ -73,19 +73,37 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`font-medium transition hover:text-blue-500 ${
-                location.pathname === link.path
-                  ? "text-blue-500"
-                  : "text-black dark:text-gray-200"
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <motion.div
+                key={link.path}
+                whileHover={{ scale: 1.1, y: -2 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="relative"
+              >
+                <Link
+                  to={link.path}
+                  className={`font-medium transition-colors ${
+                    isActive
+                      ? "text-blue-500"
+                      : "text-gray-700 dark:text-gray-200 hover:text-blue-500"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+                {isActive && (
+                  <motion.span
+                    layoutId="activeDot"
+                    className="absolute left-1/2 -bottom-2 w-2 h-2 bg-blue-500 rounded-full"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1, x: "-50%" }}
+                    transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                  />
+                )}
+              </motion.div>
+            );
+          })}
           <ThemeToggle />
         </div>
 
@@ -111,7 +129,7 @@ export default function Navbar() {
       <style>{`
         .blinking-cursor {
           display: inline-block;
-          width: 8px;
+         
           background-color: #3b82f6;
           animation: blink 1s infinite;
           margin-left: 2px;
