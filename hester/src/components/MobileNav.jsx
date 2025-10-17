@@ -58,7 +58,7 @@ export default function MobileNav({ navLinks, onClose, currentPath }) {
                 className={`flex-1 text-left text-2xl font-semibold transition-all duration-300 ${
                   isActive
                     ? "text-blue-500"
-                    : "text-gray-800 dark:text-gray-100 hover:text-blue-500"
+                    : " hover:text-blue-500"
                 }`}
               >
                 {link.name}
