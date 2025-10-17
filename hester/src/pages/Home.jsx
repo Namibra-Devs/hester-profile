@@ -75,7 +75,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
         >
           <motion.h1
-            className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight "
+            className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-3 leading-tight "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -84,7 +84,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.p
-            className="text-lg sm:text-xl lg:text-2xl mb-6 leading-relaxed font-medium"
+            className="text-lg sm:text-xl lg:text-2xl mb-3 leading-relaxed font-medium"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -115,14 +115,12 @@ export default function Home() {
             {[
               "Business Innovation",
               "Behavior Change",
-              "BoP Strategy",
-              "Storytelling",
               "PUM Consulting",
               "Marketing Consulting",
             ].map((tag) => (
               <span
                 key={tag}
-                className="px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm sm:text-base font-medium border border-blue-200 dark:border-blue-700"
+                className="px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full text-sm sm:text-base font-medium border border-blue-200 dark:border-blue-700"
               >
                 {tag}
               </span>
@@ -131,7 +129,7 @@ export default function Home() {
 
           {/* Social Links */}
           <motion.div
-            className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-8"
+            className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
@@ -144,7 +142,7 @@ export default function Home() {
                 rel={
                   social.label !== "Email" ? "noopener noreferrer" : undefined
                 }
-                className="flex items-center gap-2 px-3 sm:px-4 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-700 dark:text-gray-100 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-500 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 shadow-sm hover:shadow-md text-sm sm:text-base"
+                className="flex items-center gap-2 px-2 sm:px-2 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-700 dark:text-gray-100 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-500 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 shadow-sm hover:shadow-md text-sm sm:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
