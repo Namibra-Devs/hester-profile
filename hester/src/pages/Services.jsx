@@ -109,7 +109,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <h1 className="text-2xl lg:text-3xl font-bold pt-50 mb-2">
+            <h1 className="text-2xl lg:text-3xl font-bold lg:pt-50 mb-2">
               Professional <span className="text-blue-500">Services</span>
             </h1>
             <div className="w-12 h-1 bg-blue-500 rounded-full"></div>
@@ -213,7 +213,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            <h2 className="text-2xl lg:text-3xl font-bold  mb-2 pt-25">
+            <h2 className="text-2xl lg:text-3xl font-bold  mb-2 lg:pt-25">
               Professional <span className="text-blue-500">Experience</span>
             </h2>
             <div className="w-12 h-1 bg-blue-500 rounded-full"></div>
