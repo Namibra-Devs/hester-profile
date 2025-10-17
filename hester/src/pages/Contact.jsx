@@ -1,7 +1,7 @@
 import PageTransition from '@components/PageTransition'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { Linkedin, Mail, MapPin, Send } from 'lucide-react'
+import { Linkedin, Mail, MapPin, Send, Facebook } from 'lucide-react'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -41,7 +41,7 @@ export default function Contact() {
         
         {/* Left: Profile Image & Contact Info */}
         <motion.div
-          className="lg:w-2/5 flex flex-col items-center lg:items-start mb-8 lg:mb-0 lg:pr-12"
+          className="lg:w-2/5 flex flex-col items-center mb-8 lg:mb-0 "
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -63,7 +63,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="text-center lg:text-left">
             <motion.h2 
-              className="text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white mb-6"
+              className="text-2xl lg:text-3xl font-bold  mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
@@ -82,42 +82,52 @@ export default function Contact() {
                 href="https://linkedin.com/in/hestefrancken"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-500 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 shadow-sm hover:shadow-md"
+                className="flex items-center gap-3 px-3.5 py-3  border border-gray-200 dark:border-gray-700 rounded-xl  hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-500 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 shadow-sm hover:shadow-md"
                 whileHover={{ scale: 1.02, x: 5 }}
               >
                 <Linkedin size={20} />
                 <span className="font-medium">LinkedIn</span>
               </motion.a>
+              <motion.a
+                href="https://linkedin.com/in/hestefrancken"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-3.5 py-3  border border-gray-200 dark:border-gray-700 rounded-xl  hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-500 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 shadow-sm hover:shadow-md"
+                whileHover={{ scale: 1.02, x: 5 }}
+              >
+                <Facebook size={20} />
+                <span className="font-medium">Facebook</span>
+              </motion.a>
 
               <motion.a
-                href="mailto:hester@example.com"
-                className="flex items-center gap-3 px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-500 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 shadow-sm hover:shadow-md"
+                href="mailto:francken@bopinc.org"
+                className="flex items-center gap-3 px-4 py-3  border border-gray-200 dark:border-gray-700 rounded-xl  hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-500 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 shadow-sm hover:shadow-md"
                 whileHover={{ scale: 1.02, x: 5 }}
               >
                 <Mail size={20} />
-                <span className="font-medium">hester@example.com</span>
+                <span className="font-medium">francken@bopinc.org</span>
               </motion.a>
 
               <motion.div
-                className="flex items-center gap-3 px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-700 dark:text-gray-300"
+                className="flex items-center gap-3 px-4 py-3  border border-gray-200 dark:border-gray-700 rounded-xl "
                 whileHover={{ scale: 1.02, x: 5 }}
               >
                 <MapPin size={20} />
                 <div className="text-left">
-                  <div className="font-medium">Based in</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">The Netherlands</div>
+                  <div className="font-medium">From</div>
+                  <div className="text-sm ">Amsterdam, North Holland, Netherlands</div>
                 </div>
               </motion.div>
             </motion.div>
 
             {/* Availability */}
             <motion.div 
-              className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4"
+              className=" border border-blue-200 dark:border-blue-800 rounded-xl p-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <div className="text-sm text-blue-800 dark:text-blue-300 font-medium mb-1">
+              <div className="text-sm text-blue-700 dark:text-blue-300 font-medium mb-1">
                 Available for remote work
               </div>
               <div className="text-xs text-blue-600 dark:text-blue-400">
@@ -129,14 +139,14 @@ export default function Contact() {
 
         {/* Right: Contact Form */}
         <motion.div 
-          className="lg:w-3/5 w-full max-w-2xl"
+          className="lg:w-3/5 w-full max-w-2xl "
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 lg:p-8 shadow-xl">
+          <div className=" border border-gray-200 dark:border-gray-700 rounded-2xl p-6 lg:p-8 shadow-xl lg:-ml-80">
             <motion.h2 
-              className="text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white mb-2"
+              className="text-2xl lg:text-3xl font-bold  mb-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
@@ -145,7 +155,7 @@ export default function Contact() {
             </motion.h2>
             
             <motion.p 
-              className="text-gray-600 dark:text-gray-300 mb-6"
+              className=" mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
@@ -162,7 +172,7 @@ export default function Contact() {
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Full Name *
                   </label>
                   <input
@@ -172,13 +182,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500  transition-all duration-300"
                     placeholder="Your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
                     Email Address *
                   </label>
                   <input
@@ -188,7 +198,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500  transition-all duration-300"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -200,7 +210,7 @@ export default function Contact() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
               >
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="service" className="block text-sm font-medium mb-2">
                   Service Type *
                 </label>
                 <select
@@ -209,7 +219,7 @@ export default function Contact() {
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-all duration-300 appearance-none bg-white dark:bg-gray-700"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500   transition-all duration-300 appearance-none "
                 >
                   <option value="">Select a service</option>
                   {services.map((service) => (
@@ -226,7 +236,7 @@ export default function Contact() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
               >
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium  mb-2">
                   Project Details *
                 </label>
                 <textarea
@@ -236,7 +246,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500  transition-all duration-300 resize-none"
                   placeholder="Tell me about your project, goals, and timeline..."
                 />
               </motion.div>

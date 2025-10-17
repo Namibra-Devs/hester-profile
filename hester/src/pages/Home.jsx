@@ -18,7 +18,7 @@ export default function Home() {
       label: "Facebook",
     },
     
-    { icon: Mail, href: "mailto:hester@example.com", label: "Email" },
+    { icon: Mail, href: "mailto:francken@bopinc.org", label: "Email" },
   ];
 
   const statsData = [
