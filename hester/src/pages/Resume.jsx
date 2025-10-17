@@ -162,7 +162,7 @@ function ServicesSection() {
               </p>
               
               {/* Availability & Pricing */}
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 mb-4">
+              <div className=" rounded-lg p-4 mb-4">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm font-semibold ">Available</span>
                   <span className="text-xs text-green-600 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded-full">Remote</span>

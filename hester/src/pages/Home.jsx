@@ -100,8 +100,8 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            Expert in business model innovation, behavior change strategy, and
-            storytelling bridging sustainable development and market growth. PUM
+            Expert in business model innovation, behavior change strategy,
+            storytelling, bridging sustainable development and market growth. PUM
             consultant passionate about meaningful impact.
           </motion.p>
 
