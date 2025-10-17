@@ -198,7 +198,7 @@ export default function Home() {
 
       {/* Stats Section */}
       <motion.div
-        className="max-w-6xl mx-auto pb-15 sm:pb-15 -mt-18  sm:-mt-45"
+        className="max-w-6xl mx-auto pb-15 sm:pb-15 -mt-30  sm:-mt-45"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
