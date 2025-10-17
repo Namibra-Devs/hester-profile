@@ -22,7 +22,7 @@ const projects = [
   },
 ]
 
-export default function Projects() {
+export default function Services() {
   return (
     <PageTransition>
       <section className="min-h-screen flex flex-col justify-center items-center px-6 py-10">
