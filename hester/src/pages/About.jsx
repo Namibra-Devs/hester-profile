@@ -40,7 +40,7 @@ export default function About() {
     <PageTransition>
 
       {/* === About Me Title Section === */}
-      <section className="text-center pt-45 px-4">
+      <section className="text-center pt-30 px-4 lg:pt-45 mb-8">
         
         {/* Title */}
         <motion.h2
@@ -79,7 +79,7 @@ export default function About() {
             <img
               src="/images/profile1.png"
               alt="Hester Francken"
-              className="w-full h-full object-cover rounded-xl border-4 border-white dark:border-gray-800 shadow-md"
+              className="w-full h-full object-cover rounded-xl  shadow-2xl"
             />
             {/* Corner accents */}
             <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-blue-500 rounded-tl-lg" />
@@ -161,7 +161,7 @@ export default function About() {
 
       {/* Stats Section */}
       <motion.div 
-        className="w-full px-6 lg:px-16 mt-6 lg:-mt-40"
+        className="w-full px-6 lg:px-16 mt-6 lg:-mt-40 pb-8"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.6 }}
