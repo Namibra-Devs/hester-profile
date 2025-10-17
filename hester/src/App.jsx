@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom'
 import AnimatedRoutes from '@routes/AnimatedRoutes'
 import Navbar from '@components/Navbar'
-import Footer from '@components/Footer'
+
 import { ThemeProvider, useTheme } from '@context/ThemeContext'
 
 // Main App component that uses the theme
@@ -19,7 +19,7 @@ function ThemedApp() {
     >
       <Navbar />
       <AnimatedRoutes />
-      <Footer />
+    
     </div>
   )
 }

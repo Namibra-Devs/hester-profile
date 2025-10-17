@@ -87,7 +87,7 @@ export default function Navbar() {
                   className={`font-medium transition-colors ${
                     isActive
                       ? "text-blue-500"
-                      : "text-gray-700 dark:text-gray-200 hover:text-blue-500"
+                      : " hover:text-blue-500"
                   }`}
                 >
                   {link.name}

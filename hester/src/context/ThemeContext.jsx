@@ -11,7 +11,7 @@ export const ThemeProvider = ({ children }) => {
     // Set CSS variables for colors
     if (theme === 'dark') {
       root.style.setProperty('--bg-color', '#111827') // gray-900
-      root.style.setProperty('--text-color', '#f9fafb') // gray-50
+      root.style.setProperty('--text-color', '#ffffff') // Fixed: 6 F's instead of 5
     } else {
       root.style.setProperty('--bg-color', '#ffffff')
       root.style.setProperty('--text-color', '#111827')
