@@ -1,7 +1,7 @@
 import PageTransition from "@components/PageTransition";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Linkedin, Twitter, Github, Mail, Download } from "lucide-react";
+import { Linkedin, Facebook, Mail, Download } from "lucide-react";
 
 export default function Home() {
   const [stats, setStats] = useState([0, 0, 0, 0]);
@@ -13,11 +13,11 @@ export default function Home() {
       label: "LinkedIn",
     },
     {
-      icon: Twitter,
+      icon: Facebook,
       href: "https://twitter.com/hestefrancken",
-      label: "Twitter",
+      label: "Facebook",
     },
-    { icon: Github, href: "https://github.com/hestefrancken", label: "GitHub" },
+    
     { icon: Mail, href: "mailto:hester@example.com", label: "Email" },
   ];
 
@@ -152,13 +152,14 @@ export default function Home() {
             ))}
           </motion.div>
 
-          {/* CV Download Button */}
+          {/* CV Download + Contact Me Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            className="flex justify-center lg:justify-start"
+            className="flex justify-center lg:justify-start gap-4"
           >
+            {/* Download CV */}
             <motion.a
               href="/Hester_Francken_CV.pdf"
               target="_blank"
@@ -169,6 +170,17 @@ export default function Home() {
             >
               <Download size={18} />
               <span>Download CV</span>
+            </motion.a>
+
+            {/* Contact Me */}
+            <motion.a
+              href="/contact"
+              className="flex items-center gap-3 px-5 sm:px-6 py-3 sm:py-4 bg-transparent hover:bg-blue-50 dark:hover:bg-blue-900/20 text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 rounded-xl font-medium shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Mail size={18} />
+              <span>Contact Me</span>
             </motion.a>
           </motion.div>
         </motion.div>
@@ -186,7 +198,7 @@ export default function Home() {
 
       {/* Stats Section */}
       <motion.div
-        className="max-w-6xl mx-auto pb-20 sm:pb-20 -mt-18  sm:-mt-40"
+        className="max-w-6xl mx-auto pb-15 sm:pb-15 -mt-18  sm:-mt-45"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}

@@ -69,7 +69,7 @@ export default function MobileNav({ navLinks, onClose, currentPath }) {
                 whileHover={{ scale: 1.2, rotate: 10 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 className={`${
-                  isActive ? "text-blue-500" : "text-gray-500 dark:text-gray-300"
+                  isActive ? "text-blue-500" : ""
                 }`}
               >
                 {icons[link.name]}
@@ -78,7 +78,7 @@ export default function MobileNav({ navLinks, onClose, currentPath }) {
           );
         })}
 
-        <div className="pt-10 mx-auto">
+        <div className="pt-10 mx-auto" onClick={onClose}>
           <ThemeToggle />
         </div>
       </motion.nav>
