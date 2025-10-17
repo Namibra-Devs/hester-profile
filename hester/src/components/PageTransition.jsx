@@ -6,7 +6,7 @@ import { useTheme } from '@context/ThemeContext'
 const pageTitles = {
   '/': 'Home',
   '/about': 'About',
-  '/services': 'Services',
+  '/resume': 'Resume',
   '/projects': 'Projects', 
   '/contact': 'Contact'
 }

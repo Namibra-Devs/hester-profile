@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
-import { Home, User, Folder, Mail, Handshake  } from "lucide-react";
+import { Home, User, Folder, Mail, ClipboardList  } from "lucide-react";
 
 const icons = {
   Home: <Home size={22} />,
   About: <User size={22} />,
-  Services: <Handshake  size={22} />,
+  Resume: <ClipboardList  size={22} />,
   Projects: <Folder size={22} />,
   Contact: <Mail size={22} />,
 };
