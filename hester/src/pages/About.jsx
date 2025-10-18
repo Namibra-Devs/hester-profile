@@ -2,7 +2,6 @@ import PageTransition from "@components/PageTransition";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import {
-  Download,
   Mail,
   MapPin,
   Calendar,
@@ -47,13 +46,13 @@ export default function About() {
   return (
     <PageTransition>
       {/* === About Me Title Section === */}
-      <section className="text-center px-auto relative top-25">
+      <section className="text-center px-6 sm:px-10 md:px-16 pt-12 sm:pt-18 lg:pt-25">
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="text-3xl sm:text-4xl lg:text-5xl font-bold  mb-4"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4"
         >
           A Good Story
         </motion.h2>
@@ -63,28 +62,27 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="flex items-center justify-center gap-2 
-                     text-lg sm:text-xl font-medium"
+          className="flex items-center justify-center gap-2 text-lg sm:text-xl font-medium"
         >
           <BookOpen className="w-6 h-6 text-blue-500 dark:text-blue-400" />
           <span>Every journey begins with purpose</span>
         </motion.div>
       </section>
 
-      {/* === Existing About Section === */}
-      <section className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 relative top-12 sm:top18">
+      {/* === About Section === */}
+      <section className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 lg:px-24 ">
         {/* Left: Profile Image */}
         <motion.div
-          className="lg:w-2/5 flex justify-center mb-6 lg:mb-0"
+          className="lg:w-2/5 flex justify-center mb-10 lg:mb-0"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="relative w-56 h-56 lg:w-80 lg:h-80">
+          <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
             <img
               src="/images/profile1.png"
               alt="Hester Francken"
-              className="w-full h-full object-cover rounded-xl  shadow-2xl"
+              className="w-full h-full object-cover rounded-xl shadow-2xl"
             />
             {/* Corner accents */}
             <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-blue-500 rounded-tl-lg" />
@@ -94,69 +92,63 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* Right: Content */}
+        {/* Right: Text Content */}
         <motion.div
-          className="lg:w-3/5 text-center lg:text-left"
+          className="lg:w-3/5 text-center lg:text-left px-2 sm:px-4"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="border-gray-200 dark:border-gray-700 rounded-xl p-6 lg:p-8 shadow-xl dark:shadow-5xl">
+          <div className="border-gray-200 dark:border-gray-700 rounded-xl p-6 sm:p-8 lg:p-10 shadow-xl dark:shadow-5xl">
             <motion.h1
-              className="text-2xl lg:text-3xl font-bold mb-3"
+              className="text-2xl lg:text-3xl font-bold mb-5"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              Co-Creating <span className="text-blue-500">Inclusive</span>{" "}
-              Impact
+              Co-Creating <span className="text-blue-500">Inclusive</span> Impact
             </motion.h1>
 
             <motion.div
-              className="space-y-4 mb-6"
+              className="space-y-5 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <p className="leading-relaxed text-sm lg:text-base">
-                I believe in a world where people connect and care – where
-                business and development collaboration drive meaningful change.
-                Inclusive business models are a sustainable force for progress
-                of societies.
+              <p className="leading-relaxed text-sm sm:text-base">
+                I believe in a world where people connect and care – where business and development
+                collaboration drive meaningful change. Inclusive business models are a sustainable force
+                for progress of societies.
               </p>
-              <p className="leading-relaxed text-sm lg:text-base">
-                Having worked with inspiring entrepreneurs and organizations
-                across Africa, Latin America, Asia, the Middle East and Europe
-                to co-create strategic visions, business models and
-                behavior-based solutions that put people and planet at the core
-                - I guided teams not only to design and grow for impact, but
-                also to shift mindsets and leadership from the inside out.
+              <p className="leading-relaxed text-sm sm:text-base">
+                Having worked with inspiring entrepreneurs and organizations across Africa, Latin
+                America, Asia, the Middle East and Europe to co-create strategic visions, business models
+                and behavior-based solutions that put people and planet at the core — I guided teams not
+                only to design and grow for impact, but also to shift mindsets and leadership from the
+                inside out.
               </p>
-              <p className="leading-relaxed text-sm lg:text-base">
-                When it comes to change, we need co-creation. For this, I
-                strongly believe that listening is key - just like in playing my
-                favorite African instrument: the djembé! Rhythm emerges when
-                everyone listens to each other and plays their part.
+              <p className="leading-relaxed text-sm sm:text-base">
+                When it comes to change, we need co-creation. For this, I strongly believe that listening
+                is key — just like in playing my favorite African instrument: the djembé! Rhythm emerges
+                when everyone listens to each other and plays their part.
               </p>
-              <p className="leading-relaxed text-sm lg:text-base font-medium">
-                Now I am excited to have joined Bopinc: to help design, deliver
-                and grow inclusive, commercially viable businesses that unlock
-                opportunities and improve lives for people at the Base of the
-                Pyramid.
+              <p className="leading-relaxed text-sm sm:text-base font-medium">
+                Now I am excited to have joined Bopinc: to help design, deliver and grow inclusive,
+                commercially viable businesses that unlock opportunities and improve lives for people at
+                the Base of the Pyramid.
               </p>
             </motion.div>
 
+            {/* Button Section */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mt-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
             >
-              
-
               <motion.a
                 href="/contact"
-                className="flex items-center justify-center gap-2 px-5 py-2.5 text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 text-sm"
+                className="flex items-center justify-center gap-2 px-6 sm:px-7 py-2.5 text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base"
                 whileHover={{ scale: 1.03, y: -1 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -168,32 +160,32 @@ export default function About() {
         </motion.div>
       </section>
 
-      {/* Stats Section */}
+      {/* === Stats Section === */}
       <motion.div
-        className="w-full px-6 lg:px-16 relative sm:top-10  pb-8"
+        className="w-full px-6 sm:px-10 md:px-16 lg:px-24 py-12 sm:py-16"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.6 }}
       >
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {statsData.map((stat, index) => (
             <motion.div
               key={stat.label}
-              className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center shadow-md"
+              className="border border-gray-200 dark:border-gray-700 rounded-xl p-4 sm:p-5 text-center shadow-md"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.8 + index * 0.1, type: "spring" }}
+              transition={{ delay: 0.8 + index * 0.1, type: 'spring' }}
               whileHover={{
-                scale: 1.02,
-                transition: { type: "spring", stiffness: 400 },
+                scale: 1.03,
+                transition: { type: 'spring', stiffness: 400 },
               }}
             >
               <stat.icon className="w-6 h-6 text-blue-500 mx-auto mb-2" />
-              <div className="text-xl font-bold mb-1">
+              <div className="text-xl sm:text-2xl font-bold mb-1">
                 {stats[index]}
                 {stat.suffix}
               </div>
-              <div className="text-xs font-medium">{stat.label}</div>
+              <div className="text-xs sm:text-sm font-medium">{stat.label}</div>
             </motion.div>
           ))}
         </div>
