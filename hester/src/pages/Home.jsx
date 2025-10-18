@@ -90,12 +90,11 @@ export default function Home() {
             transition={{ delay: 0.3, duration: 0.6 }}
           >
             Driving <span className="text-blue-500">inclusive innovation</span>{" "}
-            for Base of Pyramid communities through strategic business
-            transformation.
+            for Base of Pyramid communities.
           </motion.p>
 
           <motion.p
-            className="text-base sm:text-lg mb-8 leading-relaxed"
+            className="text-base sm:text-sm mb-8 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
@@ -116,7 +115,7 @@ export default function Home() {
               "Business Innovation",
               "Behavior Change",
               "PUM Consulting",
-              "Marketing Consulting",
+             
             ].map((tag) => (
               <span
                 key={tag}
@@ -159,19 +158,7 @@ export default function Home() {
             transition={{ delay: 0.7, duration: 0.6 }}
             className="flex justify-center lg:justify-start gap-4"
           >
-            {/* Download CV */}
-            <motion.a
-              href="/Hester_Francken_CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-5 sm:px-6 py-3 sm:py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-600 text-sm sm:text-base"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <Download size={18} />
-              <span>Download CV</span>
-            </motion.a>
-
+           
             {/* Contact Me */}
             <motion.a
               href="/contact"
@@ -198,16 +185,16 @@ export default function Home() {
 
       {/* Stats Section */}
       <motion.div
-        className="max-w-6xl mx-auto pb-15 sm:pb-15 -mt-55  sm:-mt-45"
+        className="max-w-6xl mx-auto"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
       >
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative -top-19 sm:top-0">
           {statsData.map((stat, index) => (
             <motion.div
               key={stat.label}
-              className=" border border-gray-200 dark:border-gray-700 rounded-2xl p-3 sm:p-6 shadow-md text-center backdrop-blur-lg"
+              className=" border border-gray-200 dark:border-gray-700 rounded-2xl p-2 sm:p-3 shadow-md text-center backdrop-blur-lg"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.2 + index * 0.1, type: "spring" }}
@@ -216,7 +203,7 @@ export default function Home() {
                 transition: { type: "spring", stiffness: 400 },
               }}
             >
-              <div className="text-2xl sm:text-3xl font-bold text-blue-500 mb-2">
+              <div className="text-lg sm:text-xl font-bold text-blue-500 mb-2">
                 {stats[index]}
                 {stat.suffix}
               </div>
