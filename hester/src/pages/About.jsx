@@ -72,7 +72,7 @@ export default function About() {
       </section>
 
       {/* === Existing About Section === */}
-      <section className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 relative top-12">
+      <section className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 relative top-12 sm:top18">
         {/* Left: Profile Image */}
         <motion.div
           className="lg:w-2/5 flex justify-center mb-6 lg:mb-0"
@@ -170,7 +170,7 @@ export default function About() {
 
       {/* Stats Section */}
       <motion.div
-        className="w-full px-6 lg:px-16 relative  pb-8"
+        className="w-full px-6 lg:px-16 relative sm:top-10  pb-8"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.6 }}
