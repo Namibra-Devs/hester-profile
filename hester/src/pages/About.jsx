@@ -47,7 +47,7 @@ export default function About() {
   return (
     <PageTransition>
       {/* === About Me Title Section === */}
-      <section className="text-center pt-30 px-4 lg:pt-45 mb-8">
+      <section className="text-center px-auto relative top-25">
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ export default function About() {
       </section>
 
       {/* === Existing About Section === */}
-      <section className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 lg:-mt-70">
+      <section className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 relative top-12">
         {/* Left: Profile Image */}
         <motion.div
           className="lg:w-2/5 flex justify-center mb-6 lg:mb-0"
@@ -152,17 +152,7 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
             >
-              <motion.a
-                href="/Hester_Francken_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 border border-blue-600 text-sm"
-                whileHover={{ scale: 1.03, y: -1 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Download size={16} />
-                <span>Download CV</span>
-              </motion.a>
+              
 
               <motion.a
                 href="/contact"
@@ -180,7 +170,7 @@ export default function About() {
 
       {/* Stats Section */}
       <motion.div
-        className="w-full px-6 lg:px-16 mt-6 lg:-mt-40 pb-8"
+        className="w-full px-6 lg:px-16 relative  pb-8"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.6 }}
