@@ -47,7 +47,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           {/* Profile Image */}
-          <div className="relative w-56 h-56 lg:w-80 lg:h-80 mb-8">
+          <div className="relative w-56 h-56 lg:w-80 lg:h-80 mb-8 mt-18 lg:mt-0">
             <img
               src="/images/profile1.png"
               alt="Hester Francken"
@@ -182,7 +182,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500  transition-all duration-300"
+                    className="w-full px-4 py-3 border text-blue-400 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500  transition-all duration-300"
                     placeholder="Your full name"
                   />
                 </div>
@@ -198,7 +198,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500  transition-all duration-300"
+                    className="w-full px-4 py-3 text-blue-400 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500  transition-all duration-300"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -246,8 +246,8 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500  transition-all duration-300 resize-none"
-                  placeholder="Tell me about your project, goals, and timeline..."
+                  className="w-full px-4 py-3 text-blue-400 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500  transition-all duration-300 resize-none"
+                  placeholder="Tell me about your project, goals and timeline..."
                 />
               </motion.div>
 

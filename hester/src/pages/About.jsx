@@ -165,7 +165,7 @@ export default function About() {
               </motion.a>
 
               <motion.a
-                href="mailto:hester@example.com"
+                href="/contact"
                 className="flex items-center justify-center gap-2 px-5 py-2.5 text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 text-sm"
                 whileHover={{ scale: 1.03, y: -1 }}
                 whileTap={{ scale: 0.98 }}

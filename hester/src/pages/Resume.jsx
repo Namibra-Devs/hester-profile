@@ -80,7 +80,7 @@ export default function Resume() {
             transition={{ delay: 0.8, duration: 0.6 }}
           >
             <motion.a
-              href="mailto:hester@example.com"
+              href="/contact"
               className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 text-sm text-center"
               whileHover={{ scale: 1.02, y: -1 }}
             >
