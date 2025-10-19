@@ -108,12 +108,12 @@ export default function Projects() {
       <section className="min-h-screen px-6 lg:px-16 py-8">
         {/* Header with Toggle */}
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-5"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl lg:text-4xl font-bold  mb-8 pt-18 lg:pt-50">
+          <h1 className="text-3xl lg:text-4xl font-bold  mb-8 pt-18 lg:pt-30">
             Work Beyond <span className="text-blue-500">Boundaries</span>
           </h1>
           

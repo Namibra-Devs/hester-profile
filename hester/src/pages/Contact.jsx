@@ -47,7 +47,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           {/* Profile Image */}
-          <div className="relative w-56 h-56 lg:w-80 lg:h-80 mb-8 mt-18 lg:mt-0">
+          <div className="relative w-56 h-56 lg:w-80 lg:h-80 mb-8 mt-18">
             <img
               src="/images/profile1.png"
               alt="Hester Francken"
@@ -139,7 +139,7 @@ export default function Contact() {
 
         {/* Right: Contact Form */}
         <motion.div 
-          className="lg:w-3/5 w-full max-w-2xl "
+          className="lg:w-3/5 w-full max-w-lg "
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}

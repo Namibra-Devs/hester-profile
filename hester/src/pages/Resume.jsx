@@ -23,7 +23,7 @@ export default function Resume() {
         
         {/* Left: Navigation Links */}
         <motion.div 
-          className="lg:w-1/3 mb-8 lg:mb-0 lg:pr-8 pt-18 lg:pt-50"
+          className="lg:w-1/3 mb-8 lg:mb-0 lg:pr-8 pt-18 lg:pt-30"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -88,16 +88,7 @@ export default function Resume() {
               <span>Contact</span>
             </motion.a>
             
-            <motion.a
-              href="/Hester_Francken_CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5  text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 text-sm text-center"
-              whileHover={{ scale: 1.02, y: -1 }}
-            >
-              <Download size={16} />
-              <span>Download CV</span>
-            </motion.a>
+          
           </motion.div>
         </motion.div>
 
