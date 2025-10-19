@@ -7,8 +7,16 @@ export default function Home() {
   const [stats, setStats] = useState([0, 0, 0, 0]);
 
   const socialLinks = [
-    { icon: Linkedin, href: "https://linkedin.com/in/hestefrancken", label: "LinkedIn" },
-    { icon: Facebook, href: "https://twitter.com/hestefrancken", label: "Facebook" },
+    {
+      icon: Linkedin,
+      href: "https://linkedin.com/in/hestefrancken",
+      label: "LinkedIn",
+    },
+    {
+      icon: Facebook,
+      href: "https://twitter.com/hestefrancken",
+      label: "Facebook",
+    },
     { icon: Mail, href: "mailto:francken@bopinc.org", label: "Email" },
   ];
 
@@ -90,8 +98,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            Expert in business model innovation, behavior change strategy, storytelling, bridging
-            sustainable development and market growth. PUM consultant passionate about meaningful impact.
+            Expert in business model innovation, behavior change strategy,
+            storytelling, bridging sustainable development and market growth.
+            PUM consultant passionate about meaningful impact.
           </motion.p>
 
           {/* Expertise Tags */}
@@ -101,14 +110,16 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            {["Business Innovation", "Behavior Change", "PUM Consulting"].map((tag) => (
-              <span
-                key={tag}
-                className="px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full text-sm sm:text-base font-medium border border-blue-200 dark:border-blue-700"
-              >
-                {tag}
-              </span>
-            ))}
+            {["Business Innovation", "Behavior Change", "PUM Consulting"].map(
+              (tag) => (
+                <span
+                  key={tag}
+                  className="px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full text-sm sm:text-base font-medium border border-blue-200 dark:border-blue-700"
+                >
+                  {tag}
+                </span>
+              )
+            )}
           </motion.div>
 
           {/* Social Links */}
@@ -123,7 +134,9 @@ export default function Home() {
                 key={social.label}
                 href={social.href}
                 target={social.label !== "Email" ? "_blank" : undefined}
-                rel={social.label !== "Email" ? "noopener noreferrer" : undefined}
+                rel={
+                  social.label !== "Email" ? "noopener noreferrer" : undefined
+                }
                 className="flex items-center gap-2 px-3 sm:px-4 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-700 dark:text-gray-100 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-500 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 shadow-sm hover:shadow-md text-sm sm:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -166,22 +179,22 @@ export default function Home() {
 
       {/* Stats Section */}
       <motion.div
-        className="max-w-6xl mx-auto px-4 sm:px-b md:px-10 py-b sm:pb-8"
+        className="max-w-6xl mx-auto px-4 sm:px-auto md:px-10 pb-4 sm:pb-8"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
       >
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 ">
           {statsData.map((stat, index) => (
             <motion.div
               key={stat.label}
               className="border border-gray-200 dark:border-gray-700 rounded-2xl p-3 sm:p-4 shadow-md text-center backdrop-blur-lg"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.2 + index * 0.1, type: 'spring' }}
+              transition={{ delay: 1.2 + index * 0.1, type: "spring" }}
               whileHover={{
                 scale: 1.02,
-                transition: { type: 'spring', stiffness: 400 },
+                transition: { type: "spring", stiffness: 400 },
               }}
             >
               <div className="text-lg sm:text-xl font-bold text-blue-500 mb-1 sm:mb-2">
@@ -215,9 +228,38 @@ function ProfileWithCircularLines() {
         }}
       >
         {/* Arcs */}
-        <circle cx="150" cy="150" r="130" stroke="rgba(59,130,246,0.8)" strokeWidth="3" fill="none" strokeDasharray="120 150" strokeLinecap="round" />
-        <circle cx="150" cy="150" r="130" stroke="rgba(59,130,246,0.4)" strokeWidth="3" fill="none" strokeDasharray="80 190" strokeLinecap="round" transform="rotate(120 150 150)" />
-        <circle cx="150" cy="150" r="130" stroke="rgba(59,130,246,0.6)" strokeWidth="3" fill="none" strokeDasharray="60 220" strokeLinecap="round" transform="rotate(240 150 150)" />
+        <circle
+          cx="150"
+          cy="150"
+          r="130"
+          stroke="rgba(59,130,246,0.8)"
+          strokeWidth="3"
+          fill="none"
+          strokeDasharray="120 150"
+          strokeLinecap="round"
+        />
+        <circle
+          cx="150"
+          cy="150"
+          r="130"
+          stroke="rgba(59,130,246,0.4)"
+          strokeWidth="3"
+          fill="none"
+          strokeDasharray="80 190"
+          strokeLinecap="round"
+          transform="rotate(120 150 150)"
+        />
+        <circle
+          cx="150"
+          cy="150"
+          r="130"
+          stroke="rgba(59,130,246,0.6)"
+          strokeWidth="3"
+          fill="none"
+          strokeDasharray="60 220"
+          strokeLinecap="round"
+          transform="rotate(240 150 150)"
+        />
       </motion.svg>
 
       <img
