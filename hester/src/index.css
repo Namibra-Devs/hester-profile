@@ -10,3 +10,7 @@ body {
   scroll-behavior: smooth;
   font-family: "Mona Sans", sans-serif;
 }
+.p-safe {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
