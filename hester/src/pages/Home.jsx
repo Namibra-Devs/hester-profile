@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <PageTransition>
       {/* Mobile Image on Top */}
-      <div className="block lg:hidden pt-16 sm:pt-20 pb-8">
+      <div className="block lg:hidden pt-16 sm:pt-23 pb-3">
         <motion.div
           className="flex justify-center"
           initial={{ opacity: 0, y: -50 }}
@@ -166,7 +166,7 @@ export default function Home() {
 
       {/* Stats Section */}
       <motion.div
-        className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 py-12 sm:py-16"
+        className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-8"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}

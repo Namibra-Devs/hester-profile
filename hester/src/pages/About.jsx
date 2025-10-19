@@ -46,7 +46,7 @@ export default function About() {
   return (
     <PageTransition>
       {/* === About Me Title Section === */}
-      <section className="text-center px-6 sm:px-10 md:px-16 pt-12 sm:pt-18 lg:pt-25">
+      <section className="text-center px-6 sm:px-10 md:px-16 pt-12 sm:pt-25 lg:pt-25">
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
