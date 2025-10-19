@@ -27,19 +27,12 @@ export default function MobileNav({ navLinks, onClose, currentPath }) {
         transition: { type: "spring", stiffness: 100, damping: 18 },
       }}
     >
-      {/* Background layer (glassy) */}
-      <div
-        className="absolute inset-0 backdrop-blur-3xl bg-white/30 dark:bg-black/60 border border-white/20 dark:border-gray-700 rounded-lg"
-        style={{
-          WebkitBackdropFilter: "blur(24px)",
-          backdropFilter: "blur(24px)",
-          backgroundColor: "rgba(15,15,15,0.5)", 
-        }}
-      />
+      {/* Background layer - Solid colors */}
+      <div className="absolute inset-0 bg-white dark:bg-gray-900" />
 
       {/* Navigation links */}
       <motion.nav
-        className="relative flex flex-col space-y-8 px-30 py-8 rounded-3xl bg-white/10 dark:bg-black/30 backdrop-blur-2xl border border-white/20 dark:border-gray-800 shadow-md"
+        className="relative flex flex-col space-y-8 px-20 py-8 rounded-3xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-xl"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
         exit={{ opacity: 0, y: 30 }}
@@ -59,7 +52,7 @@ export default function MobileNav({ navLinks, onClose, currentPath }) {
                 className={`w-3 h-3 rounded-full ${
                   isActive
                     ? "bg-blue-500 shadow-[0_0_10px_2px_rgba(59,130,246,0.7)]"
-                    : ""
+                    : "bg-gray-300 dark:bg-gray-600"
                 }`}
               />
 
@@ -68,7 +61,9 @@ export default function MobileNav({ navLinks, onClose, currentPath }) {
                 to={link.path}
                 onClick={onClose}
                 className={`flex-1 text-left text-2xl font-semibold transition-all duration-300 ${
-                  isActive ? "text-blue-500" : " hover:text-blue-500"
+                  isActive 
+                    ? "text-blue-500" 
+                    : "text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
                 }`}
               >
                 {link.name}
@@ -78,7 +73,11 @@ export default function MobileNav({ navLinks, onClose, currentPath }) {
               <motion.div
                 whileHover={{ scale: 1.2, rotate: 10 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className={`${isActive ? "text-blue-500" : ""}`}
+                className={`${
+                  isActive 
+                    ? "text-blue-500" 
+                    : "text-gray-600 dark:text-gray-400"
+                }`}
               >
                 {icons[link.name]}
               </motion.div>
